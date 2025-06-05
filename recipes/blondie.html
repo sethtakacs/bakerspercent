@@ -19,7 +19,7 @@
       <label for="flourInput">Enter total flour weight (g):</label>
       <input type="number" id="flourInput" class="form-control w-25 d-inline-block" />
       <button class="btn btn-primary ms-2" onclick="compute()">Calculate</button>
-      <p><em>Recommended flour: <strong>200g</strong></em></p>
+      <p><em>Recommended flour: <strong>300g</strong></em></p>
     </section>
 
     <section class="recipe-results mb-4">
@@ -28,37 +28,49 @@
         <p>Brown Sugar: — g</p>
 <p>Butter: — g</p>
 <p>Egg: — g</p>
-<p>Vanilla: — g</p>
 <p>Salt: — g</p>
 <p>Baking Powder: — g</p>
       </div>
     </section>
 
     
-<!-- Google AdSense Ad 1 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134"
+     crossorigin="anonymous"></script>
 <!-- Baker 1 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="4630209217" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1340629545335134"
+     data-ad-slot="4630209217"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 
     <section>
       <h2>Instructions</h2>
       <ol>
         <li>Preheat oven to 350°F (175°C).</li>
-<li>Melt butter and mix with brown sugar.</li>
-<li>Add eggs and vanilla, mix well.</li>
-<li>Combine flour, baking powder, and salt. Add to wet ingredients.</li>
-<li>Spread in pan and bake 25–30 minutes.</li>
+<li>Melt butter, mix with brown sugar.</li>
+<li>Whisk in eggs, add dry ingredients.</li>
+<li>Pour into greased pan and bake 25–30 min.</li>
       </ol>
     </section>
 
     
-<!-- Google AdSense Ad 2 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134"
+     crossorigin="anonymous"></script>
 <!-- Baker 2 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="7953783654" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1340629545335134"
+     data-ad-slot="7953783654"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
   </main>
 
@@ -72,12 +84,11 @@
       const flour = parseFloat(document.getElementById("flourInput").value);
       if (!flour || flour <= 0) return;
       const formula = {
-        "Brown Sugar": 100,
-        "Butter": 100,
+        "Brown Sugar": 160,
+        "Butter": 80,
         "Egg": 50,
-        "Vanilla": 2,
         "Salt": 1,
-        "Baking Powder": 1.5
+        "Baking Powder": 1
       };
       const container = document.getElementById("resultsList");
       container.innerHTML = "";
@@ -89,7 +100,7 @@
       }
     }
     window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("flourInput").value = 200;
+      document.getElementById("flourInput").value = 300;
       compute();
     });
   </script>

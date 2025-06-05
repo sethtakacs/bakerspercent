@@ -19,14 +19,14 @@
       <label for="flourInput">Enter total flour weight (g):</label>
       <input type="number" id="flourInput" class="form-control w-25 d-inline-block" />
       <button class="btn btn-primary ms-2" onclick="compute()">Calculate</button>
-      <p><em>Recommended flour: <strong>50g</strong></em></p>
+      <p><em>Recommended flour: <strong>100g</strong></em></p>
     </section>
 
     <section class="recipe-results mb-4">
       <h3>Calculated Ingredient Weights:</h3>
       <div id="resultsList">
-        <p>Egg: — g</p>
-<p>Sugar: — g</p>
+        <p>Sugar: — g</p>
+<p>Egg: — g</p>
 <p>Lemon Juice: — g</p>
 <p>Zest: — g</p>
 <p>Salt: — g</p>
@@ -34,29 +34,42 @@
     </section>
 
     
-<!-- Google AdSense Ad 1 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134"
+     crossorigin="anonymous"></script>
 <!-- Baker 1 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="4630209217" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1340629545335134"
+     data-ad-slot="4630209217"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 
     <section>
       <h2>Instructions</h2>
       <ol>
-        <li>Whisk eggs, sugar, lemon juice, zest, and salt.</li>
-<li>Add flour and whisk until smooth.</li>
-<li>Pour over pre-baked crust.</li>
-<li>Bake at 325°F for 20–25 minutes until set.</li>
+        <li>Whisk eggs, sugar, zest, juice, and salt.</li>
+<li>Add flour and mix until smooth.</li>
+<li>Pour over pre-baked crust, bake at 325°F (160°C) for 20 min.</li>
       </ol>
     </section>
 
     
-<!-- Google AdSense Ad 2 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134"
+     crossorigin="anonymous"></script>
 <!-- Baker 2 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="7953783654" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1340629545335134"
+     data-ad-slot="7953783654"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
   </main>
 
@@ -70,11 +83,11 @@
       const flour = parseFloat(document.getElementById("flourInput").value);
       if (!flour || flour <= 0) return;
       const formula = {
-        "Egg": 100,
         "Sugar": 200,
+        "Egg": 150,
         "Lemon Juice": 100,
         "Zest": 2,
-        "Salt": 0.5
+        "Salt": 1
       };
       const container = document.getElementById("resultsList");
       container.innerHTML = "";
@@ -86,7 +99,7 @@
       }
     }
     window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("flourInput").value = 50;
+      document.getElementById("flourInput").value = 100;
       compute();
     });
   </script>

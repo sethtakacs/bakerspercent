@@ -19,46 +19,58 @@
       <label for="flourInput">Enter total flour weight (g):</label>
       <input type="number" id="flourInput" class="form-control w-25 d-inline-block" />
       <button class="btn btn-primary ms-2" onclick="compute()">Calculate</button>
-      <p><em>Recommended flour: <strong>250g</strong></em></p>
+      <p><em>Recommended flour: <strong>300g</strong></em></p>
     </section>
 
     <section class="recipe-results mb-4">
       <h3>Calculated Ingredient Weights:</h3>
       <div id="resultsList">
         <p>Sugar: — g</p>
-<p>Butter: — g</p>
 <p>Egg: — g</p>
+<p>Butter: — g</p>
 <p>Milk: — g</p>
 <p>Baking Powder: — g</p>
-<p>Salt: — g</p>
-<p>Vanilla: — g</p>
       </div>
     </section>
 
     
-<!-- Google AdSense Ad 1 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134"
+     crossorigin="anonymous"></script>
 <!-- Baker 1 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="4630209217" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1340629545335134"
+     data-ad-slot="4630209217"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 
     <section>
       <h2>Instructions</h2>
       <ol>
         <li>Cream butter and sugar until fluffy.</li>
-<li>Add eggs one at a time. Mix in milk and vanilla.</li>
-<li>Sift flour, baking powder, and salt. Add gradually.</li>
-<li>Pour into pan and bake at 350°F (175°C) for 30–35 minutes.</li>
+<li>Add eggs one at a time, mix thoroughly.</li>
+<li>Sift flour and baking powder, alternate adding with milk.</li>
+<li>Pour into pan and bake at 350°F (175°C) for 30–35 min.</li>
       </ol>
     </section>
 
     
-<!-- Google AdSense Ad 2 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134"
+     crossorigin="anonymous"></script>
 <!-- Baker 2 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="7953783654" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1340629545335134"
+     data-ad-slot="7953783654"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
   </main>
 
@@ -73,12 +85,10 @@
       if (!flour || flour <= 0) return;
       const formula = {
         "Sugar": 100,
-        "Butter": 100,
         "Egg": 50,
-        "Milk": 50,
-        "Baking Powder": 2,
-        "Salt": 1,
-        "Vanilla": 1
+        "Butter": 50,
+        "Milk": 40,
+        "Baking Powder": 2
       };
       const container = document.getElementById("resultsList");
       container.innerHTML = "";
@@ -90,7 +100,7 @@
       }
     }
     window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("flourInput").value = 250;
+      document.getElementById("flourInput").value = 300;
       compute();
     });
   </script>

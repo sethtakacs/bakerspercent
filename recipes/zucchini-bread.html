@@ -19,47 +19,60 @@
       <label for="flourInput">Enter total flour weight (g):</label>
       <input type="number" id="flourInput" class="form-control w-25 d-inline-block" />
       <button class="btn btn-primary ms-2" onclick="compute()">Calculate</button>
-      <p><em>Recommended flour: <strong>250g</strong></em></p>
+      <p><em>Recommended flour: <strong>300g</strong></em></p>
     </section>
 
     <section class="recipe-results mb-4">
       <h3>Calculated Ingredient Weights:</h3>
       <div id="resultsList">
-        <p>Grated Zucchini: — g</p>
+        <p>Zucchini: — g</p>
 <p>Sugar: — g</p>
 <p>Egg: — g</p>
 <p>Oil: — g</p>
 <p>Baking Powder: — g</p>
 <p>Salt: — g</p>
-<p>Cinnamon: — g</p>
       </div>
     </section>
 
     
-<!-- Google AdSense Ad 1 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134"
+     crossorigin="anonymous"></script>
 <!-- Baker 1 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="4630209217" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1340629545335134"
+     data-ad-slot="4630209217"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 
     <section>
       <h2>Instructions</h2>
       <ol>
         <li>Preheat oven to 350°F (175°C).</li>
-<li>Mix oil, sugar, eggs, and grated zucchini.</li>
-<li>Combine flour, baking powder, salt, and cinnamon.</li>
-<li>Mix wet and dry ingredients.</li>
-<li>Pour into greased pan and bake 50 minutes.</li>
+<li>Grate zucchini and squeeze out excess moisture.</li>
+<li>Whisk eggs, oil, and sugar together.</li>
+<li>Fold in zucchini, then sift and mix in dry ingredients.</li>
+<li>Pour into pan and bake for 50–55 minutes.</li>
       </ol>
     </section>
 
     
-<!-- Google AdSense Ad 2 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134"
+     crossorigin="anonymous"></script>
 <!-- Baker 2 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="7953783654" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1340629545335134"
+     data-ad-slot="7953783654"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
   </main>
 
@@ -73,13 +86,12 @@
       const flour = parseFloat(document.getElementById("flourInput").value);
       if (!flour || flour <= 0) return;
       const formula = {
-        "Grated Zucchini": 80,
+        "Zucchini": 100,
         "Sugar": 100,
         "Egg": 20,
-        "Oil": 50,
+        "Oil": 40,
         "Baking Powder": 2,
-        "Salt": 1,
-        "Cinnamon": 1
+        "Salt": 1
       };
       const container = document.getElementById("resultsList");
       container.innerHTML = "";
@@ -91,7 +103,7 @@
       }
     }
     window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("flourInput").value = 250;
+      document.getElementById("flourInput").value = 300;
       compute();
     });
   </script>
