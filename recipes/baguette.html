@@ -5,55 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baguette Recipe</title>
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
 </head>
 <body>
-  <header><h1>Baguette</h1><nav><a href="../index.html">Home</a></nav></header>
-  <main>
-    <section><label for="flourInput">Enter total flour weight (g):</label>
-    <input type="number" id="flourInput" />
-    <button onclick="compute()">Calculate</button>
-    <p><em>Recommended flour: <strong>500g</strong></em></p></section>
-    <section class="recipe-results">
-<h3>Calculated Ingredient Weights:</h3>
-<div id="resultsList"><p>Water: — g</p>
+  <header class="bg-primary text-white p-4 mb-4" style="background-color: #ADD8E6 !important;">
+    <div class="container">
+      <h1>Baguette</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="mb-3">
+      <label for="flourInput">Enter total flour weight (g):</label>
+      <input type="number" id="flourInput" class="form-control w-25 d-inline-block" />
+      <button class="btn btn-primary ms-2" onclick="compute()">Calculate</button>
+      <p><em>Recommended flour: <strong>500g</strong></em></p>
+    </section>
+
+    <section class="recipe-results mb-4">
+      <h3>Calculated Ingredient Weights:</h3>
+      <div id="resultsList">
+        <p>Water: — g</p>
 <p>Salt: — g</p>
-<p>Yeast: — g</p></div></section>
-<div class="ad-container">
+<p>Yeast: — g</p>
+      </div>
+    </section>
+
+    
+<!-- Google AdSense Ad 1 -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<!-- Baker 1 -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="4630209217" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
-<section><h2>Instructions</h2><ol><li>Combine ingredients and mix until shaggy.</li>
-<li>Autolyse 30 minutes, then knead briefly.</li>
-<li>Bulk ferment 2 hours, folding every 30 minutes.</li>
-<li>Divide into 3 pieces, pre-shape, and rest 20 min.</li>
-<li>Shape into baguettes, proof on couche 45–60 min.</li>
-<li>Score and bake at 475°F (245°C) with steam for 20–25 minutes.</li></ol></section>
-<div class="ad-container">
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+
+    <section>
+      <h2>Instructions</h2>
+      <ol>
+        <li>Mix flour, water, and yeast. Autolyse 30 min.</li>
+<li>Add salt, mix and rest 20 min.</li>
+<li>Fold dough every 30 min for 2 hours.</li>
+<li>Divide and shape. Proof for 45 minutes.</li>
+<li>Score and bake at 475°F with steam for 25 min.</li>
+      </ol>
+    </section>
+
+    
+<!-- Google AdSense Ad 2 -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<!-- Baker 2 -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="7953783654" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
-</main><footer><p>&copy; 2025 Baker's Percentage Toolkit</p></footer>
-<script src="../js/script.js"></script>
-<script>
-function compute() {
-  const flour = parseFloat(document.getElementById("flourInput").value);
-  if (!flour || flour <= 0) return;
-  const formula = {
-"Water": 75,
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  </main>
+
+  <footer class="bg-light text-center py-4 mt-5 border-top">
+    <p class="mb-0">&copy; 2025 Baker’s Percentage Toolkit</p>
+    <a href="../index.html" class="btn btn-outline-primary mt-2">Home</a>
+  </footer>
+
+  <script>
+    function compute() {
+      const flour = parseFloat(document.getElementById("flourInput").value);
+      if (!flour || flour <= 0) return;
+      const formula = {
+        "Water": 75,
         "Salt": 2,
         "Yeast": 0.8
-  };
-  const container = document.getElementById("resultsList");
-  container.innerHTML = "";
-  for (const ingredient in formula) {
-    const percent = formula[ingredient];
-    const amt = +(flour * (percent / 100)).toFixed(1);
-    const line = document.createElement("p");
-    line.textContent = ingredient + ": " + amt + "g";
-    container.appendChild(line);
-  }
-}
-window.addEventListener("DOMContentLoaded", () => { document.getElementById("flourInput").value = 500; compute(); });
-</script>
+      };
+      const container = document.getElementById("resultsList");
+      container.innerHTML = "";
+      for (const ingredient in formula) {
+        const amt = +(flour * (formula[ingredient] / 100)).toFixed(1);
+        const line = document.createElement("p");
+        line.textContent = ingredient + ": " + amt + "g";
+        container.appendChild(line);
+      }
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("flourInput").value = 500;
+      compute();
+    });
+  </script>
 </body>
 </html>

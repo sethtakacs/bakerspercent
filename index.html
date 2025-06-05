@@ -2,48 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO Metadata -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Baker’s Percentage Toolkit – Scale Recipes with Precision</title>
   <meta name="description" content="Use our free baker’s percentage calculator to scale bread, cake, and pastry recipes by flour weight. Ideal for home bakers and professionals." />
   <meta name="keywords" content="baker's percentage, baking calculator, recipe scaling, bread formulas, baking toolkit" />
   <meta name="author" content="Baker’s Percentage Toolkit" />
-  <link rel="canonical" href="https://yourusername.github.io/your-repo/" />
-
-  <!-- Open Graph Metadata -->
-  <meta property="og:title" content="Baker’s Percentage Toolkit – Scale Recipes with Precision" />
-  <meta property="og:description" content="Free calculator to scale bread and pastry recipes using baker’s percentages. Perfect for home bakers and professionals." />
-  <meta property="og:image" content="https://cdn.pixabay.com/photo/2015/06/19/21/24/bread-815869_1280.jpg" />
-  <meta property="og:url" content="https://yourusername.github.io/your-repo/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card Metadata -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Baker’s Percentage Toolkit – Scale Recipes with Precision" />
-  <meta name="twitter:description" content="Free calculator to scale bread and pastry recipes using baker’s percentages. Perfect for home bakers and professionals." />
-  <meta name="twitter:image" content="https://cdn.pixabay.com/photo/2015/06/19/21/24/bread-815869_1280.jpg" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Google AdSense -->
   <meta name="google-adsense-account" content="ca-pub-1340629545335134">
+  <link rel="canonical" href="https://sethtakacs.github.io/bakerspercent/" />
+  <meta property="og:image" content="https://en.wikipedia.org/wiki/File:Korb_mit_Br%C3%B6tchen.JPG" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
 </head>
+<body style="background-color: #f8f9fa;">
+  <header class="bg-primary text-white p-4 mb-4" style="background-color: #ADD8E6 !important;">
+    <div class="container">
+      <h1 class="display-4">Baker’s Percentage Toolkit</h1>
+      <p class="lead">Scale any recipe with precision using baker’s math.</p>
+    </div>
+  </header>
 
-
-<body>
-  <header>
-    <h1>Baker’s Percentage Toolkit</h1>
-    <nav>
-      <label for="recipeSelect">Select a Recipe:</label>
-      <select id="recipeSelect" onchange="navigateToRecipe()">
-        <option value="">--Choose a Recipe--</option>
-        <option value="recipes/white-bread.html">White Bread</option>
+  <main class="container">
+    <div class="mb-4">
+      <label for="recipeSelect" class="form-label">Select a Recipe:</label>
+      <select id="recipeSelect" class="form-select" onchange="navigateToRecipe()">
+<option value="">--Choose a Recipe--</option>
+<option value="recipes/white-bread.html">White Bread</option>
 <option value="recipes/wheat-bread.html">Wheat Bread</option>
 <option value="recipes/baguette.html">Baguette</option>
 <option value="recipes/bagel.html">Bagel</option>
@@ -63,19 +47,27 @@
 <option value="recipes/pie-crust.html">Pie Crust</option>
 <option value="recipes/graham-cracker-crust.html">Graham Cracker Crust</option>
 <option value="recipes/raised-donuts.html">Raised Donuts</option>
-      </select>
-    </nav>
-  </header>
+</select>
+        
+    </div>
 
-  <main>
-    <h2>What Are Baker’s Percentages?</h2>
-    <p>Baker’s percentages express ingredients as a percent of the flour weight. This allows easy scaling.</p>
-    <p>To use these calculators, you’ll need a kitchen scale. Choose a recipe, input your desired flour weight, and the rest is automatic.</p>
+    <div class="text-center mb-4">
+      <img src="https://en.wikipedia.org/wiki/File:Korb_mit_Br%C3%B6tchen.JPG" class="img-fluid rounded shadow" alt="Fresh Bread">
+    </div>
+
+    <section>
+      <h2>What Are Baker’s Percentages?</h2>
+      <p>Baker’s percentages express ingredients as a percent of the flour weight. This allows easy scaling and consistency, whether baking one loaf or one hundred.</p>
+      <p>To use these calculators, you’ll need a kitchen scale. Choose a recipe, input your desired flour weight, and the calculator will do the rest. Each recipe includes a recommended weight for one unit of the finished product.</p>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Baker’s Percentage Toolkit</p>
+  <footer class="bg-light text-center py-4 mt-5 border-top">
+    <p class="mb-0">&copy; 2025 Baker’s Percentage Toolkit</p>
+    <a href="index.html" class="btn btn-outline-primary mt-2">Home</a>
   </footer>
+
   <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
