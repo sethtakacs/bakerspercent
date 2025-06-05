@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baguette Recipe</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header><h1>Baguette</h1><nav><a href="../index.html">Home</a></nav></header>
+  <main>
+    <section><label for="flourInput">Enter total flour weight (g):</label>
+    <input type="number" id="flourInput" />
+    <button onclick="compute()">Calculate</button>
+    <p><em>Recommended flour: <strong>500g</strong></em></p></section>
+    <section class="recipe-results">
+<h3>Calculated Ingredient Weights:</h3>
+<div id="resultsList"><p>Water: — g</p>
+<p>Salt: — g</p>
+<p>Yeast: — g</p></div></section>
+<div class="ad-container">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="4630209217" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<section><h2>Instructions</h2><ol><li>Combine ingredients and mix until shaggy.</li>
+<li>Autolyse 30 minutes, then knead briefly.</li>
+<li>Bulk ferment 2 hours, folding every 30 minutes.</li>
+<li>Divide into 3 pieces, pre-shape, and rest 20 min.</li>
+<li>Shape into baguettes, proof on couche 45–60 min.</li>
+<li>Score and bake at 475°F (245°C) with steam for 20–25 minutes.</li></ol></section>
+<div class="ad-container">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="7953783654" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+</main><footer><p>&copy; 2025 Baker's Percentage Toolkit</p></footer>
+<script src="../js/script.js"></script>
+<script>
+function compute() {
+  const flour = parseFloat(document.getElementById("flourInput").value);
+  if (!flour || flour <= 0) return;
+  const formula = {
+"Water": 75,
+        "Salt": 2,
+        "Yeast": 0.8
+  };
+  const container = document.getElementById("resultsList");
+  container.innerHTML = "";
+  for (const ingredient in formula) {
+    const percent = formula[ingredient];
+    const amt = +(flour * (percent / 100)).toFixed(1);
+    const line = document.createElement("p");
+    line.textContent = ingredient + ": " + amt + "g";
+    container.appendChild(line);
+  }
+}
+window.addEventListener("DOMContentLoaded", () => { document.getElementById("flourInput").value = 500; compute(); });
+</script>
+</body>
+</html>

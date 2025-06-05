@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cake Base Recipe</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header><h1>Cake Base</h1><nav><a href="../index.html">Home</a></nav></header>
+  <main>
+    <section><label for="flourInput">Enter total flour weight (g):</label>
+    <input type="number" id="flourInput" />
+    <button onclick="compute()">Calculate</button>
+    <p><em>Recommended flour: <strong>300g</strong></em></p></section>
+    <section class="recipe-results">
+<h3>Calculated Ingredient Weights:</h3>
+<div id="resultsList"><p>Sugar: — g</p>
+<p>Butter: — g</p>
+<p>Egg: — g</p>
+<p>Milk: — g</p>
+<p>Baking Powder: — g</p>
+<p>Salt: — g</p></div></section>
+<div class="ad-container">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="4630209217" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<section><h2>Instructions</h2><ol><li>Cream butter and sugar until fluffy.</li>
+<li>Beat in eggs one at a time.</li>
+<li>Add dry ingredients alternately with milk.</li>
+<li>Pour into greased cake pans.</li>
+<li>Bake at 350°F (175°C) for 30–35 minutes.</li>
+<li>Cool before frosting.</li>
+<li>Flavor variations: add 25g cocoa powder for chocolate cake; add extracts or zests for other flavors.</li></ol></section>
+<div class="ad-container">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1340629545335134" crossorigin="anonymous"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1340629545335134" data-ad-slot="7953783654" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+</main><footer><p>&copy; 2025 Baker's Percentage Toolkit</p></footer>
+<script src="../js/script.js"></script>
+<script>
+function compute() {
+  const flour = parseFloat(document.getElementById("flourInput").value);
+  if (!flour || flour <= 0) return;
+  const formula = {
+"Sugar": 100,
+        "Butter": 70,
+        "Egg": 30,
+        "Milk": 50,
+        "Baking Powder": 2,
+        "Salt": 1
+  };
+  const container = document.getElementById("resultsList");
+  container.innerHTML = "";
+  for (const ingredient in formula) {
+    const percent = formula[ingredient];
+    const amt = +(flour * (percent / 100)).toFixed(1);
+    const line = document.createElement("p");
+    line.textContent = ingredient + ": " + amt + "g";
+    container.appendChild(line);
+  }
+}
+window.addEventListener("DOMContentLoaded", () => { document.getElementById("flourInput").value = 300; compute(); });
+</script>
+</body>
+</html>
